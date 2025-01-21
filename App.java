@@ -8,13 +8,18 @@ public class App{
         int boardWidth = colCount * tileSize;
         int boardHeight = rowCount * tileSize;
 
-        JFrame frame = new JFrame("Pac-man");
-        // frame.setVisiblle(true);
+        JFrame frame = new JFrame("Pacman");
+        frame.setVisiblle(true);
         frame.setSize(boardWidth,` boardHeight);
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        PacMan pacmanGame = new PacMan();
+        frame.add(pacmanGame);
+        frame.pack();
+        pacmanGame.requestFocus();
+        frame.setVisible(true);
     
     }
         
